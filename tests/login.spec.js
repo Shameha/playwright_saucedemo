@@ -6,8 +6,8 @@ const { chromium } = require("playwright");
   const page = await context.newPage();
 
   await page.goto("https://www.saucedemo.com/");
-  await page.fill();
-  await page.fill();
-  await page.click();
+  await page.fill("#user-name", "standard_user");
+  await page.fill("#password", "secret_sauce");
+  await page.click("#login-button");
   
 })();
