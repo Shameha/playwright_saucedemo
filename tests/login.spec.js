@@ -19,4 +19,16 @@ const { chromium } = require("playwright");
   // when we choose id or name or else its call selector but when we choose class its call locator
   await page.click('button[data-test="shopping-cart-link"]')
   await page.waitForTimeout(2000);
+  await page.click('button[data-test="checkout"]')
+  await page.waitForTimeout(2000);
+  await page.fill("#first-name","Rifat");
+  await page.waitForTimeout(2000);
+  await page.fill("#last-name","Hossain");
+  await page.waitForTimeout(2000);
+  await page.fill("#postal-code","1212");
+  await page.waitForTimeout(2000);
+  await page.click('input[data-test="continue"]');
+  await page.waitForTimeout(2000);
+  await page.click('button[data-test="finish"]');
+  await page.waitForTimeout(2000);
 })();
